@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/adbde3dab9.js" crossorigin="anonymous"></script>
+
+
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="container">
+  <h1>Ply Span Calculator</h1>
+  <form action="" id="plySpanForm">
+    <div class="row mt-4">
+      <div class="col-sm-4">
+        <label for="SelectPly" class="form-control  bg-secondary-subtle">Select Ply</label>
+        <select class="form-control " aria-label="Default select example" id="SelectPly">
+          <!-- <option selected>select item</option> -->
+          <option value="1">1 Canadian 19mm Douglas Fir 5,6 of 7 ply sanded</option>
+          <option value="2">2 Finnish 18mm Wisaform special Birch 13 ply overlaid</option>
+          <option value="3">3 Canadian 17.5mm COFIFORM PLUS 7 ply sanded</option>
+          <option value="4">4 Canadian 19mm COFIFORM PLUS 7 ply sanded</option>
+        </select>
+      </div>
+    
+
+
+      <div class="col-sm-4">
+        <label for="h20Spacing" class="form-control  bg-secondary-subtle">Select Secondary Spacing</label>
+        <select class="form-control " aria-label="Default select example" id="h20Spacing">
+          <option value="0"selected>select...</option>
+          <option value="1">610</option>
+          <option value="2">488</option>
+          <option value="3">407</option>
+          <option value="4">348</option>
+          <option value="5">305</option>
+          <option value="6">271</option>
+          <option value="7">244</option>
+          <option value="8">222</option>
+          <option value="9">203</option>
+          <!-- <option value="10">Error</option> -->
+        </select>
+      </div>
+
+
+      <div class="col-sm-2">
+        <label for="slabThickness" class="form-control bg-secondary-subtle">Slab Thickness</label>
+        <input type="number" class="form-control " name="" id="slabThickness">
+      </div>
+
+      <div class="col-sm-2">
+        <label for="lockSpacing" class="form-control bg-secondary-subtle">Lock Spacing</label>
+        <input class="form-check-input mt-3 checkBoxBg" type="checkbox" value="" id="lockSpacing"><!---->
+      </div>
+      <!-- <div class="col-sm-3">
+        <label for="dynamicLoadCheckbox" class="form-control bg-secondary-subtle">USe Dynamic load (% of Live
+          Load)</label>
+        <input class="form-check-input mt-3" type="checkbox" value="" min="1" max = "10" id="dynamicLoadCheckbox">
+      </div>
+      <div class="col-sm-2">
+        <label for="dynamicLoadValue" class="form-control bg-secondary-subtle">Dynamic load (%)</label>
+        
+        <input type="number" class="form-control " name="" id="dynamicLoadValue" readonly>
+      </div> -->
+    </div>
+
+    <div class="row mt-4">
+
+
+     
+
+      <div class="col-sm-3">
+        <label for="totalLoad" class="form-control bg-secondary-subtle">Total Load</label>
+        <input type="text" class="results form-control" name="" id="totalLoad" readonly>
+      </div>
+      <div class="col-sm-3">
+        <label for="loadOnSecondary" class="form-control bg-secondary-subtle">Load on Secondary Beam</label>
+        <input type="text" class="results form-control " name="" id="loadOnSecondary" readonly>
+      </div>
+
+
+
+    </div>
+
+
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-sm">
+
+        </div>
+        <div class="col-sm">
+          Permissible
+        </div>
+        <div class="col-sm">
+          Actual
+        </div>
+        <div class="col-sm">
+          Remarks
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-sm">
+          Shear Force
+        </div>
+        <div class="col-sm">
+          <input type="text" class="results form-control " name="" id="permissibleShear" readonly>
+        </div>
+        <div class="col-sm">
+          <input type="text" class="results form-control "name="" id="actualShear" readonly>
+        </div>
+        <div class="col-sm">
+          <input type="text" class="results form-control "name="" id="remarkShear" readonly>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-sm">
+          Bending Moment
+        </div>
+        <div class="col-sm">
+          <input type="text" class="results form-control "name="" id="permissibleBm" readonly>
+        </div>
+        <div class="col-sm">
+          <input type="text" class="results form-control "name="" id="actualBm" readonly>
+        </div>
+        <div class="col-sm">
+          <input type="text" class="results form-control "name="" id="remarkBm" readonly>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-sm">
+          Deflection
+        </div>
+        <div class="col-sm">
+          <input type="text" class="results form-control "name="" id="permissibleDeflection" readonly>
+        </div>
+        <div class="col-sm">
+          <input type="text" class="results form-control "name="" id="actualDeflection" readonly>
+        </div>
+        <div class="col-sm">
+          <input type="text" class="results form-control "name="" id="remarkDeflection" readonly >
+        </div>
+      </div>
+    </div>  
+
+  </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
